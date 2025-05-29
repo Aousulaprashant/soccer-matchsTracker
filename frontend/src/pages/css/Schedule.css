@@ -1,0 +1,326 @@
+.match-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+  max-width: 480px;
+  width: 100%;
+}
+
+.match-card:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.15);
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-align: center;
+}
+
+.team img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.team p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.teams span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #666;
+  user-select: none;
+}
+
+.date,
+.venue,
+.status,
+.referee,
+.round {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+@media (max-width: 480px) {
+  .match-card {
+    padding: 12px 16px;
+  }
+
+  .teams {
+    gap: 12px;
+  }
+
+  .team {
+    width: 70px;
+  }
+
+  .team img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .teams span {
+    font-size: 1rem;
+  }
+}
+
+/* Schedule.css */
+
+.schedule-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.schedule-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #346e93; /* nice blue */
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error {
+  text-align: center;
+  color: #b91c1c; /* red */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.matches-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  /* 3 cards per row, but responsive */
+}
+
+/* Optional: make sure MatchCard doesn't stretch too wide */
+.match-card {
+  width: 100%;
+  max-width: 350px;
+}
+
+/*a=============================================
+
+
+
+
+
+
+==============================
+*/
+
+
+
+.match-card {
+  background-color: #1e1e2f; /* dark background for sporty feel */
+  color: #f5f5f7; /* light text for contrast */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  max-width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  text-align: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* circular logos */
+    border: 2px solid #f05a28; /* sporty orange accent border */
+    padding: 4px;
+    background: #2c2c3f;
+    margin-bottom: 8px;
+    object-fit: contain;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    user-select: none;
+  }
+}
+
+.teams > span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #f05a28; /* accent color */
+  user-select: none;
+}
+
+.date,
+.venue,
+.status,
+.referee,
+.round {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  color: #d1d1d6;
+  user-select: none;
+}
+
+.status {
+  font-weight: 700;
+  color: #f05a28; /* highlight the status */
+}
+
+@media (max-width: 480px) {
+  .match-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .team {
+    width: 80px;
+  }
+
+  .team img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.teams {
+  position: relative; /* to contain the absolutely positioned background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+  overflow: visible;
+}
+
+.vsBack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%; /* adjust as needed */
+  height: 130%; /* adjust as needed */
+  transform: translate(-50%, -50%);
+ /* subtle */
+  z-index: 0;
+  pointer-events: none; /* so it doesn't interfere with hover/click */
+  user-select: none;
+ border-radius: 10px;
+}
+
+.team {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* above background */
+  text-align: center;
+  min-width: 90px;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* circular logos */
+  border: 2px solid #f05a28;
+  padding: 3px;
+  background: #2c2c3f;
+  margin-bottom: 6px;
+  object-fit: contain;
+}
+
+.vs-text {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #f05a28;
+  user-select: none;
+}
+
+
+
+
+
+
+
+.match-details {
+  padding: 10px 0 0 0;
+  border-top: 1px solid #44495a; /* subtle divider */
+  margin-top: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.match-details div {
+  font-size: 0.88rem;
+  color: #a0a4b2; /* soft medium gray */
+  margin: 4px 0;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+}
+
+.match-details div span.label {
+  font-weight: 600;
+  color: #6c7082; /* darker muted gray for label */
+}
+
+.match-details .status {
+  color: #f27c36; /* warm orange highlight but subtle */
+  font-weight: 700;
+}
