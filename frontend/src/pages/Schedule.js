@@ -12,7 +12,7 @@ const Schedule = () => {
     const fetchMatches = async () => {
       try {
         const response = await axois.get(
-          "http://localhost:5000/api/schedule/upcoming"
+          "https://soccer-matchs-tracker.vercel.app/api/schedule/upcoming"
         );
 
         // Axios automatically parses JSON
